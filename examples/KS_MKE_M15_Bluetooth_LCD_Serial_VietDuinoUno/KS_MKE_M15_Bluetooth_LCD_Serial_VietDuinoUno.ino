@@ -10,8 +10,8 @@
 // LCD config
 MKL_LiquidCrystal_I2C lcd(0x27, 16, 2);
 
-#define TX_PIN 1 //lap chan RXw
-#define RX_PIN 0 //lap chan TX
+#define TX_PIN 12 //lap chan RX cua M15
+#define RX_PIN 13 //lap chan TX cua M15
 
 // Khai báo module.
 // Declare module.
