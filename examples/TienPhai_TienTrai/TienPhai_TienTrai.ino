@@ -60,7 +60,7 @@ void tienTrai() //dang loi
   digitalWrite(in4, LOW);
 
   // Set motors to maximum speed //0 & 100 --> quay tai cho
-  analogWrite(enA, speed25); //75 --> 50 
+  analogWrite(enA, speed35); //75 --> 50 
   analogWrite(enB, speed100);
 }
 
