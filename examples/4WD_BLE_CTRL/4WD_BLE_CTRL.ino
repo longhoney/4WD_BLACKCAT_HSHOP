@@ -27,12 +27,13 @@
   //0-255 ADC ~ 0-100%
   int speed100 = 255;
   int speed75 = 191;
+  int speed60 = 153;
   int speed50 = 127;
   int speed35 = 90;
   int speed25 = 64;
   int speed15 = 38;
   int speed0 = 0;
-  
+
 void setup() {
   // Setup Bluetooth
   Serial.begin(9600);      // make sure your Serial Monitor is also set at this baud rate.
@@ -56,14 +57,17 @@ void loop() {
   {
     //Serial.print("UP");
     //fwd_acclerate();
-    forward();
+    Cat_forward();
   }
-
+  else //ngung nhan nut thi xe ngung chay
+  {
+    Cat_stop();
+  }
   if (GamePad.isDownPressed())
   {
     //Serial.print("DOWN");
     //bwd_acclerate();
-    backward();
+    Cat_backward();
   }
 
   if (GamePad.isLeftPressed())
@@ -91,7 +95,7 @@ void loop() {
   if (GamePad.isCrossPressed())
   {
     //Serial.print("Cross");
-    Cat_stop(); //Turn off all motors
+    //Cat_stop(); //Turn off all motors
   }
 
   if (GamePad.isTrianglePressed())
@@ -114,58 +118,28 @@ void loop() {
 }
 
 //========Cac ham dieu khien xe========//
-void fwd_acclerate(){
+void Cat_forward() {
   // Turn on motor A & B and go forward
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
 
-  // Accelerate from zero to maximum speed
-  for (int i = 0; i < 256; i++) {
-    analogWrite(enA, i);
-    analogWrite(enB, i);
-    delay(20);
-  }
-}
-
-void bwd_acclerate(){
-  // Turn on motor A & B and go forward
-  digitalWrite(in1, LOW);
-  digitalWrite(in2, HIGH);
-  digitalWrite(in3, LOW);
-  digitalWrite(in4, HIGH);
-
-  // Accelerate from zero to maximum speed
-  for (int i = 0; i < 256; i++) {
-    analogWrite(enA, i);
-    analogWrite(enB, i);
-    delay(20);
-  }
-}
-
-void forward() {
   // Set motors to maximum speed
-  digitalWrite(enA, HIGH);
-  digitalWrite(enB, HIGH);
-
-  // Turn on motor A & B and go forward
-  digitalWrite(in1, HIGH);
-  digitalWrite(in2, LOW);
-  digitalWrite(in3, HIGH);
-  digitalWrite(in4, LOW);
+  analogWrite(enA, speed60);
+  analogWrite(enB, speed60);
 }
 
-void backward(){
-  // Set motors to maximum speed
-  digitalWrite(enA, HIGH);
-  digitalWrite(enB, HIGH);
-
+void Cat_backward(){ 
   // Now change motor directions - go backward
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
+
+  // Set motors to maximum speed
+  analogWrite(enA, speed75);
+  analogWrite(enB, speed75);
 }
 
 void tienPhai(){
@@ -177,7 +151,7 @@ void tienPhai(){
 
   // Set motors to maximum speed
   analogWrite(enA, speed100);
-  analogWrite(enB, speed75);
+  analogWrite(enB, speed25);
 }
 
 void tienTrai() //dang loi
@@ -189,7 +163,7 @@ void tienTrai() //dang loi
   digitalWrite(in4, LOW);
 
   // Set motors to maximum speed //0 & 100 --> quay tai cho
-  analogWrite(enA, speed35); //75 --> 50 
+  analogWrite(enA, speed25); //75 --> 50 
   analogWrite(enB, speed100);
 }
 
