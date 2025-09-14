@@ -42,6 +42,10 @@
     - 100% bên phải khi rẽ trái bị yếu đi nhiều nên xe rẽ trái vẫn chậm dù đã cân bằng tốc độ
 
 `2025-09-15`
+- Đảo chiều vỏ xe: 4 vỏ phải cùng chiều để giảm khả năng lệnh cho xe đi thẳng nhưng xe đi chếch sang phải
+https://lopxehaitrieu.vn/phan-biet-lop-mot-chieu-va-lop-da-chieu/#1_Lop_1_chieu_la_gi
+- Tra mỡ bò vào bánh răng của động cơ và cho động cơ chạy ở tốc độ 35% để bôi trơn đều các bề mặt bánh răng
+    - Tạo chương trình test từng động cơ riêng
 - Nút vuông = lùi trái, nút tròn = lùi phải
 - Thêm tích năng: bật đèn xi nhan khi rẽ trái/phải
     - Thử if-else bằng Serial.print() trước khi test với đèn thật và cuối cùng là test với xe
