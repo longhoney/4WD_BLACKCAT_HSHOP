@@ -4,7 +4,7 @@
  * For More Info Visit: www.DeepBlueMbedded.com
  * Preference: https://deepbluembedded.com/arduino-motor-encoder-optical-encoder-interfacing/
 */
-#define ENCODER_PIN 11
+#define ENCODER_PIN 2   //giu nguyen chan D2 thay vi D11
 #define ENCODER_N   20
 
 //Define Pin
