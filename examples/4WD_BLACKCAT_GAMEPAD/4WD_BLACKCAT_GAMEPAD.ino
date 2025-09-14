@@ -13,6 +13,7 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);      // make sure your Serial Monitor is also set at this baud rate.
   Dabble.begin(9600, 13, 12);      //Enter baudrate of your bluetooth.Connect bluetooth on Bluetooth port present on evive.
+  //RX of Uno = D13, TX of Uno = D12
 }
 
 void loop() {
@@ -67,8 +68,9 @@ void loop() {
   {
     Serial.print("Select");
   }
+  /*
   Serial.print('\t');
-
+  
   int a = GamePad.getAngle();
   Serial.print("Angle: ");
   Serial.print(a);
@@ -84,5 +86,6 @@ void loop() {
   float d = GamePad.getYaxisData();
   Serial.print("y_axis: ");
   Serial.println(d);
+  */
   Serial.println();
 }
