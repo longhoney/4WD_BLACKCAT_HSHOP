@@ -24,10 +24,10 @@
     - Tiến phải: 100 - 15: Tốt --> 100 - 25: OK
     - Tiến trái: 15 - 100: Chậm --> 25 - 100: OK nhưng chậm
 
-- 18h15
+- 19h15
     - Canh tốc độ 2 bánh thủ công sao cho khi lệnh xe đi tiến thẳng, xe vẫn tiến thẳng
         - Nếu cho 2 bên chạy 100%  thì bên phải như đang chạy bằng 65% của bên trái
         - Thử đi thẳng với 65 - 100
         - Không thử thủ công mà dùng encoder
-        https://deepbluembedded.com/arduino-motor-encoder-optical-encoder-interfacing/
+        https://deepbluembedded.com/arduino-motor-encoder-optical-encoder-interfacing/ --> Code không hoạt động    
     - Xe rẽ trái chậm hơn xe rẽ phải vì lý do 2 bên động cơ quay không đều
