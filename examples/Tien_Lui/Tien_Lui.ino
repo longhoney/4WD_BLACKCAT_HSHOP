@@ -8,6 +8,20 @@
   int in3 = 5;
   int in4 = 4;
 
+//Define speed
+  /*
+    0-255 ADC ~ 0-100%
+    255 = 100% = 220RPM (Phai)
+    173 =  68% = 150rpm (Trai)
+  */
+
+  int speed100 = 255; //220rPM  (phai 150rpm)
+  int speed60 = 153; //190RPM
+  int speed50 = 127; //175RPM  (phai 100rpm)
+  int speed35 = 90;  //140RPM  (phai 60rpm)
+  int speed25 = 64;   //90RPM  (125rpm tại 3VDC) (phai khong quay)
+  int speed15 = 38;
+  int speed0 = 0;
 void setup() {
   // Set all the motor control pins to outputs
   pinMode(enA, OUTPUT);
@@ -18,11 +32,12 @@ void setup() {
   pinMode(in4, OUTPUT);
 
   stop();
-
-  //forward();
+  delay(2000);
+  
+  forward();
   //backward();
   //speedForward();
-  fwd_acclerate();
+  //fwd_acclerate();
   delay(5000);
   //delay(2000);
   //bwd_acclerate();
@@ -40,19 +55,15 @@ void loop() {
 
 // This function lets you control spinning direction of motors
 void forward() {
-  // Set motors to maximum speed
-  digitalWrite(enA, HIGH);
-  digitalWrite(enB, HIGH);
-
   // Turn on motor A & B and go forward
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
-  delay(2000);
-
-  stop();
-  delay(2000);
+  
+  //0-255bit ADC
+  analogWrite(enA, 173);
+  analogWrite(enB, 255);
 }
 
 void backward(){

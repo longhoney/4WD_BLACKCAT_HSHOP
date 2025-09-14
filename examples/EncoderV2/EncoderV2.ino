@@ -21,9 +21,13 @@
   int TxUno = 12;
 
 //Define speed
-  //0-255 ADC ~ 0-100%
-  int speed100 = 255; //225RPM (phai 185rpm)
-  int speed75 = 191; //210RPM  (phai 150rpm)
+  /*
+    0-255 ADC ~ 0-100%
+    255 = 100% = 220RPM (Phai)
+    173 =  68% = 150rpm (Trai)
+  */
+
+  int speed100 = 255; //220rPM  (phai 150rpm)
   int speed60 = 153; //190RPM
   int speed50 = 127; //175RPM  (phai 100rpm)
   int speed35 = 90;  //140RPM  (phai 60rpm)

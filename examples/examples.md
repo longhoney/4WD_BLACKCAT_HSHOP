@@ -31,5 +31,8 @@
         - Không thử thủ công mà dùng encoder
         https://deepbluembedded.com/arduino-motor-encoder-optical-encoder-interfacing/ --> Code không hoạt động --> Do dùng D11 thay vì D2 có Interupt --> Code chạy
             - Trái trên, 100% = 225RPM (6V)
-            - 
     - Xe rẽ trái chậm hơn xe rẽ phải vì lý do 2 bên động cơ quay không đều
+    - Canh chỉnh lại tốc độ của 2 động cơ
+        - 0-255 ADC ~ 0-100%
+        - 255 = 100% = 220RPM (Phai)
+        - 173 =  68% = 150rpm (Trai)
