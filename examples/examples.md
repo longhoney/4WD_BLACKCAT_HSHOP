@@ -36,3 +36,13 @@
         - 0-255 ADC ~ 0-100%
         - 255 = 100% = 220RPM (Phai)
         - 173 =  68% = 150rpm (Trai)
+
+- 21h30
+    - Chốt phương án: 87.5 - 100 (trái - phải) khi xe đi thẳng
+    - 100% bên phải khi rẽ trái bị yếu đi nhiều nên xe rẽ trái vẫn chậm dù đã cân bằng tốc độ
+
+`2025-09-15`
+- Nút vuông = lùi trái, nút tròn = lùi phải
+- Thêm tích năng: bật đèn xi nhan khi rẽ trái/phải
+    - Thử if-else bằng Serial.print() trước khi test với đèn thật và cuối cùng là test với xe
+    - Thử đèn sáng/tắt trước khi thử đèn nhấp nháy
