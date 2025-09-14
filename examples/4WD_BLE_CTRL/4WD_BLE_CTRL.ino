@@ -23,6 +23,16 @@
   int RxUno = 13;
   int TxUno = 12;
 
+//Define speed
+  //0-255 ADC ~ 0-100%
+  int speed100 = 255;
+  int speed75 = 191;
+  int speed50 = 127;
+  int speed35 = 90;
+  int speed25 = 64;
+  int speed15 = 38;
+  int speed0 = 0;
+  
 void setup() {
   // Setup Bluetooth
   Serial.begin(9600);      // make sure your Serial Monitor is also set at this baud rate.
@@ -59,11 +69,13 @@ void loop() {
   if (GamePad.isLeftPressed())
   {
     //Serial.print("Left");
+    tienTrai();
   }
 
   if (GamePad.isRightPressed())
   {
     //Serial.print("Right");
+    tienPhai();
   }
 
   if (GamePad.isSquarePressed())
@@ -154,6 +166,31 @@ void backward(){
   digitalWrite(in2, HIGH);
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
+}
+
+void tienPhai(){
+  // Turn on motor A & B and go forward
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+
+  // Set motors to maximum speed
+  analogWrite(enA, speed100);
+  analogWrite(enB, speed75);
+}
+
+void tienTrai() //dang loi
+{ 
+  // Turn on motor A & B and go forward
+  digitalWrite(in1, HIGH);
+  digitalWrite(in2, LOW);
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
+
+  // Set motors to maximum speed //0 & 100 --> quay tai cho
+  analogWrite(enA, speed35); //75 --> 50 
+  analogWrite(enB, speed100);
 }
 
 void Cat_stop(){
