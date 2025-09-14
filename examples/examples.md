@@ -29,4 +29,5 @@
         - Nếu cho 2 bên chạy 100%  thì bên phải như đang chạy bằng 65% của bên trái
         - Thử đi thẳng với 65 - 100
         - Không thử thủ công mà dùng encoder
+        https://deepbluembedded.com/arduino-motor-encoder-optical-encoder-interfacing/
     - Xe rẽ trái chậm hơn xe rẽ phải vì lý do 2 bên động cơ quay không đều
