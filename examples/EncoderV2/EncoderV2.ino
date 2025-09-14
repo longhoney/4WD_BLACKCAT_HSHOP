@@ -22,12 +22,12 @@
 
 //Define speed
   //0-255 ADC ~ 0-100%
-  int speed100 = 255; //225RPM
-  int speed75 = 191; //210RPM
+  int speed100 = 255; //225RPM (phai 185rpm)
+  int speed75 = 191; //210RPM  (phai 150rpm)
   int speed60 = 153; //190RPM
-  int speed50 = 127; //175RPM
-  int speed35 = 90;  //140RPM
-  int speed25 = 64;   //90RPM (125rpm tại 3VDC)
+  int speed50 = 127; //175RPM  (phai 100rpm)
+  int speed35 = 90;  //140RPM  (phai 60rpm)
+  int speed25 = 64;   //90RPM  (125rpm tại 3VDC) (phai khong quay)
   int speed15 = 38;
   int speed0 = 0;
  
@@ -54,12 +54,12 @@ void Cat_forward() {
   // Turn on motor A & B and go forward
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
-  //digitalWrite(in3, HIGH);
-  //digitalWrite(in4, LOW);
+  digitalWrite(in3, HIGH);
+  digitalWrite(in4, LOW);
 
   // Set motors to maximum speed
-  analogWrite(enA, speed25);
-  //analogWrite(enB, speed100);
+  //analogWrite(enA, speed25);
+  analogWrite(enB, speed100);
 }
 
 void Cat_stop(){
