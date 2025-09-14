@@ -28,6 +28,7 @@
   */
 
   int speed100 = 255; //220rPM  (phai 150rpm)
+  int speed75 = 191;
   int speed60 = 153; //190RPM
   int speed50 = 127; //175RPM  (phai 100rpm)
   int speed35 = 90;  //140RPM  (phai 60rpm)
