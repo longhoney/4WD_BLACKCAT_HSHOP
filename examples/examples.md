@@ -50,3 +50,26 @@ https://lopxehaitrieu.vn/phan-biet-lop-mot-chieu-va-lop-da-chieu/#1_Lop_1_chieu_
 - Thêm tích năng: bật đèn xi nhan khi rẽ trái/phải
     - Thử if-else bằng Serial.print() trước khi test với đèn thật và cuối cùng là test với xe
     - Thử đèn sáng/tắt trước khi thử đèn nhấp nháy
+
+`2025-09-17`
+Anh Ngọc khuyên:
+- Tôi nên tập trung vào phần code, vì khung xe tôi nhận được chỉ là khung xe cùi bắp (không thể so sánh với khung xe tăng). TÔi không thể chỉnh phần cứng mãi
+    - Khắc phục các lỗi hiện có bằng code hoặc tự điều khiển xe đi thẳng trở lại
+
+- Chương trình điều khiển qua Bluetoohth cơ bản
+    - Tôi bắt đầu làm thêm các bài tập: bật xi nhan khi xe rẽ, chớp đèn hazard khi xe lùi (dùng kxnTask)
+    - Tận dụng 4 nút bấm trên gamepad để thực hiện các chức năng khác của xe: bấm còi, bật đèn, tắt đèn
+
+- Để tái sử dụng chương trình trên các khung xe khác nhau, tôi cần phải viết thư viện. Tôi nên viết theo mẫu thư viện của anh Ngọc, thống nhất dùng chung 1 chuẩn.
+    - Ví dụ lệnh xe tiến phía trước thì 2 bên bánh xe phải dùng quay tiến. Đây là quy tắc chung áp dụng cho mọi khung xe, từ xe 4 bánh tới xe bánh xích
+
+
+- Chương trình xe tránh vật cản
+- Chương trình xe dò line
+
+
+- Dùng thẻ RFID để mở khóa xe
+    - Chương trình sẽ tinh gọn khi lòng ghép được thư viện điều khiển xe vào ...
+
+- Sau đó sử dụng thêm mạch cảm biến gia tốc, cảm biến la bàn trên khung xe ... MPU6050 là cảm biến phổ biến, giá rẻ.
+    - Tôi mượn về nghiên cứu kỹ (làm theo các chương trình mẫu lắp trên xe theo như trên mạng), sau đó mua và thí nghiệm trên khung xe của Hshop
